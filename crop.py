@@ -20,7 +20,7 @@ if I:
     
     # load the two input images
     src = cv2.imread(I)
-    cropped_image = src[src.shape[0]/2-options.width/2:src.shape[0]/2+options.width/2,src.shape[1]/2-options.width/2:src.shape[1]/2+options.width/2]
+    cropped_image = src[int(src.shape[0]/2-options.width/2):int(src.shape[0]/2+options.width/2),int(src.shape[1]/2-options.width/2):int(src.shape[1]/2+options.width/2)]
     
     head,tail = os.path.split(I)
     cv2.imwrite(head+'Cropped'+tail,cropped_image)
