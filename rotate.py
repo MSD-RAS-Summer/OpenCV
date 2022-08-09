@@ -18,7 +18,7 @@ if I:
     
     # load the two input images
     src = cv2.imread(I)
-    image = cv2.rotate(src, cv2.cv2.ROTATE_90_CLOCKWISE)
+    image = cv2.rotate(src, cv2.ROTATE_180)
     
     head,tail = os.path.split(I)
     cv2.imwrite(head +'Rotated'+tail,image)
